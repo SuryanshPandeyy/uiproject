@@ -52,6 +52,9 @@ form {
  .content input~.focus_border{
   display: none; 
  }
+ .content button{
+  margin: 1rem 0;
+ }
 }
 
 .content div.first-form .label{
@@ -64,7 +67,7 @@ form {
 }
 
 .content input:not([type="file"], [type="number"], [type="checkbox"]), select{
- width: 50vw;
+ width: 70vw;
  height: 3rem;
  border: none;
  outline: none;
@@ -121,8 +124,8 @@ button:focus {
  justify-content: center;
  align-items: center;
  position: relative;
- width: 80vw;
- height: 70rem;
+ width: 90vw;
+ height:  80rem;
  overflow: hidden;
 }
 
@@ -207,4 +210,7 @@ button:focus {
  height: 15rem;
  border: 1px solid grey;
  overflow: auto;
+}
+.upload label{
+ margin: .4rem 0;
 }
