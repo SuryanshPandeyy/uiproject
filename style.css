@@ -1,0 +1,199 @@
+* {
+ padding: 0;
+ margin: 0;
+ font-size: 1.5rem;
+ box-sizing: border-box;
+}
+
+html {
+ font-size: 62.5%;
+ scroll-behavior: smooth
+}
+
+.icon {
+ width: 100%;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+}
+
+.icon h2 {
+ font-size: 4vw;
+}
+
+.info {
+ margin: 1rem;
+ width: 60vw;
+}
+
+.content {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: 4rem 0;
+}
+
+form {
+ display: flex;
+ flex-direction: column;
+ position: relative;
+}
+
+.content form div.first-form {
+ display: flex;
+ align-items: center;
+}
+
+.content div.first-form .label{
+ align-self: flex-start;
+ margin: 1rem 0;
+ position: absolute;
+ pointer-events: none;
+ color: grey;
+ transition: .3s ease all;
+}
+
+.content input:not([type="file"], [type="number"]), select{
+ max-width: 40rem;
+ width: 50rem;
+ height: 3rem;
+ border: none;
+ outline: none;
+ border-bottom: .1rem solid grey;
+}
+
+
+.content input:focus~.label,
+.content input:not(:focus):valid~.label {
+ top: -2rem;
+ left: -.5rem;
+ font-size: 1.1rem;
+ opacity: 1;
+ transition: .3s ease all;
+}
+
+.content input~.focus_border {
+ position: absolute;
+ bottom: 0rem;
+ left: 50%;
+ width: 0;
+ height: 2px;
+ background-color: #000000;
+ transition: 0.4s;
+}
+
+.content input:focus~.focus_border {
+ width: 70%;
+ transition: 0.4s;
+ left: 0;
+}
+
+button {
+ border: none;
+ outline: none;
+ background-color: white;
+ cursor: pointer;
+ border: .1rem solid #000000;
+ padding: .5rem;
+ border-radius: .3rem;
+ margin: 0 2rem;
+}
+
+button:hover,
+button:focus {
+ background-color: royalblue;
+ color: white;
+ border: none;
+}
+
+.content .ui-form {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ width: 50rem;
+ height: 65rem;
+ overflow: hidden;
+}
+
+.content form .ui-div {
+ display: flex;
+ flex-direction: column;
+ position: absolute;
+ top: 8rem;
+ left: 4rem;
+ transition: 0.5s;
+}
+
+.content form .third-form {
+ left: 55rem;
+}
+
+.btn-box{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ width: 100%;
+}
+.btn-box button{
+ margin: 1rem 0;
+ width: fit-content;
+}
+
+.ui-div div:not(.btn-box){
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: space-around;
+ margin: 1.5rem 0;
+}
+
+.ui-div div .label {
+ align-self: flex-start;
+ position: relative;
+ pointer-events: none;
+ color: grey;
+ transition: .3s ease all;
+ top: -2rem;
+}
+
+
+.ui-div input:focus~.label,
+.ui-div input:not(:focus):valid~.label{
+ top: -4rem;
+ left: -.5rem;
+ font-size: 1.1rem;
+ opacity: 1;
+ transition: .3s ease all;
+}
+
+.ui-div input~.focus_border {
+ position: relative;
+ bottom: 1.3rem;
+ left: 50%;
+ width: 0;
+ height: 2px;
+ background-color: #000000;
+ transition: 0.4s;
+}
+
+.ui-div input:focus~.focus_border{
+ width: 100%;
+ transition: 0.4s;
+ left:0;
+}
+.ui-div textarea{
+ resize: vertical;
+}
+
+.max{
+ font-size: 1.1rem;
+}
+
+select#test{
+ height: 17rem;
+ overflow: scroll;
+ border: 1px solid grey;
+ padding: 2rem;
+}
