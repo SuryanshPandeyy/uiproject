@@ -44,6 +44,13 @@ form {
  align-items: center;
 }
 
+@media only screen and (max-width: 450px){
+ .content form div.first-form{
+  display: flex;
+  flex-direction: column;
+ }
+}
+
 .content div.first-form .label{
  align-self: flex-start;
  margin: 1rem 0;
@@ -54,8 +61,7 @@ form {
 }
 
 .content input:not([type="file"], [type="number"]), select{
- max-width: 40rem;
- width: 50rem;
+ width: 50vw;
  height: 3rem;
  border: none;
  outline: none;
@@ -112,7 +118,7 @@ button:focus {
  justify-content: center;
  align-items: center;
  position: relative;
- width: 50rem;
+ width: 80vw;
  height: 65rem;
  overflow: hidden;
 }
@@ -122,12 +128,14 @@ button:focus {
  flex-direction: column;
  position: absolute;
  top: 8rem;
- left: 4rem;
+ left: 50%;
+ transform: translate(-50%,0);
  transition: 0.5s;
 }
 
 .content form .third-form {
- left: 55rem;
+ left: 100%;
+ transform: translate(0%, 0);
 }
 
 .btn-box{
